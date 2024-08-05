@@ -8,7 +8,7 @@ namespace MVC.Models
         public string Name { get; set; }
         [MaxLength(300)]
         public string Description { get; set; }
-        [Range(1,100000)]
+        [Range(1, 100000)]
         public decimal Price { get; set; }
         [Url]
         public string PictureUrl { get; set; }

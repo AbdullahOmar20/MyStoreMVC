@@ -3,6 +3,8 @@ using Core.Entities;
 
 namespace DBaccess.Specification
 {
+    //trasnfoms the query of fetching products with thier brands and type
+    //and applying searching, filtering, paggination with eager loading 
     public class ProductWithBrandAndTypeSpecification : BaseSpecification<Product>
     {
         public ProductWithBrandAndTypeSpecification(ProductParams productParams) : base(criteria => 

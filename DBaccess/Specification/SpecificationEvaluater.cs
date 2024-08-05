@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DBaccess.Specification
 {
+    //It trasforms the specification obejct to LINQ query 
     public class SpecificationEvaluater<T> where T : class
     {
         public static IQueryable<T> GetQuery(IQueryable<T> inputQuery, ISpecification<T> spec){

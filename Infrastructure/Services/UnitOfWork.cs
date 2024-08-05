@@ -5,6 +5,9 @@ using DBaccess.Data;
 
 namespace Infrastructure.Services
 {
+    //a design pattern to group all operations on the database in single place 
+    //with single connection to the database
+    //to prevent any conflict while adding, updating, deleting using same instance of DbContext
     public class UnitOfWork : IUnitofWork
     {
         private readonly MyShopDbContext _context;

@@ -9,28 +9,26 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     <table>
         <th>
-            <td>Name</td>
-            <td>Description</td>
-            <td>Price</td>
-            <td>Product Type</td>
-            <td>Product Brand</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Product Type</td>
+        <td>Product Brand</td>
         </th>
 
-            @foreach(var p in Model.Data)
-            {
-                <tr>
+        @foreach (var p in Model.Data)
+        {
+            <tr>
                 <td>@p.Name</td>
                 <td>@p.Description</td>
                 <td>@p.Price</td>
                 <td>@p.ProductTypeName</td>
                 <td>@p.ProductBrandName</td>
-                </tr>
+            </tr>
 
-            }
-        
+        }
+
     </table>
     <h2>@Model.PageIndex</h2>
     <h2>@Model.PageSize</h2>
 </div>
-
-

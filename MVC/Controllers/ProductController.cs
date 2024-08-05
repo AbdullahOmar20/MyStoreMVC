@@ -11,15 +11,15 @@ namespace MVC.Controllers;
 
 public class ProductController : Controller
 {
-    
+
     private readonly IUnitofWork _unitofwork;
     private readonly IGenericRepository<Product> _repo;
     private readonly IMapper _mapper;
     public ProductController(IUnitofWork unitofwork, IGenericRepository<Product> repo, IMapper mapper)
     {
-        _unitofwork=unitofwork;
-        _repo=repo;
-        _mapper=mapper;
+        _unitofwork = unitofwork;
+        _repo = repo;
+        _mapper = mapper;
     }
     [HttpGet("/")]
     public async Task<IActionResult> Index([FromQuery] ProductParams productParams)

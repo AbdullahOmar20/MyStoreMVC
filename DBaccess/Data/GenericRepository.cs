@@ -1,5 +1,4 @@
 
-using Core.Entities;
 using Core.Interfaces;
 using DBaccess.Specification;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DBaccess.Data
 {
+    //A design pattern that makes an abstraction layer above the DbContext to ensure the seperation of concern 
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly MyShopDbContext _context;
@@ -50,7 +50,7 @@ namespace DBaccess.Data
             _context.Entry(entity).State = EntityState.Modified;
         }
 
-        private IQueryable<T> ApplySpec( ISpecification<T> spec)
+        private IQueryable<T> ApplySpec(ISpecification<T> spec)
         {
             return SpecificationEvaluater<T>.GetQuery(_context.Set<T>().AsQueryable(), spec);
         }

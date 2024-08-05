@@ -2,6 +2,8 @@
 
 namespace DBaccess.Specification
 {
+
+    //the object where we will take data from the query params to pass to the specificatio classes
     public class ProductParams
     {
         private const int maxsize = 50;
